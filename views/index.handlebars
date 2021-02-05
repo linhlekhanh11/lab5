@@ -21,14 +21,15 @@
 	<div class="container"> 
 		<h1>My HCI Friends</h1>
 		<!-- new div -->
+		{{#each friends}}
 		<div class= "friends">
-			{{#each friends}}
 			<img class="img-responsive img-rounded" src="{{imageURL}}" >
-			<a class= "name" href="#">
-				<h3>{{name}}</h3>
-			</a>
+			<a href="#">
+			<h3 class= "name">{{name}}</h3>
+			
 			<p>{{description}}</p>
 			<hr> {{/each}}
+		</a>
 		</div>
 
 		<form id="addFriendForm" role="form" method="get" action="/add">
