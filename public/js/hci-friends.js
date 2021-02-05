@@ -3,19 +3,22 @@
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
-	$(".name").click(function(e) {
-		e.preventDefault();
-		currname = $(this).text();
-		$(this).html('<h3>'+anagrammedName(currname)+'</h3>') 
+	$("h3.name").click(Click);
 		
-	});
 })
+
 
 /*
  * Function that is called when the document is ready.
  */
 function initializePage() {
 	console.log("Javascript connected!");
+
+}
+function Click(e){
+	e.preventDefault();
+	name = $(this).text();
+	$(this).html('<h3>'+anagrammedName(name)+'</h3>');
 }
 
 function anagrammedName(name) {
@@ -50,5 +53,3 @@ function anagrammedName(name) {
 		return name;
 	}
 }
-
-

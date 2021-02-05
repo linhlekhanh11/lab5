@@ -7,7 +7,7 @@
 	<script src="js/jquery-1.11.0.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/hci-friends.js"></script>
-	
+
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	
 	<!-- Bootstrap -->
@@ -24,12 +24,10 @@
 		<div class= "friends">
 			{{#each friends}}
 			<img class="img-responsive img-rounded" src="{{imageURL}}" >
-			<a href="#" class= "name" >
+			<a class= "name" href="#">
 				<h3>{{name}}</h3>
 			</a>
-			<p>
-				{{description}}
-			</p>
+			<p>{{description}}</p>
 			<hr> {{/each}}
 		</div>
 
